@@ -8,8 +8,8 @@ export default function Navbar() {
   const isHome = location.pathname === '/';
 
   const navLinks = [
-    { name: 'Startseite', to: '/', isRoute: true },
-    { name: 'Über mich & Autorin', to: '/ueber-mich', isRoute: true },
+    { name: 'Start', to: '/', isRoute: true },
+    { name: 'Über mich', to: '/ueber-mich', isRoute: true },
     { name: 'Philosophie', href: isHome ? '#philosophie' : '/#philosophie' },
     { name: 'Regressionshypnose', href: isHome ? '#regressionshypnose' : '/#regressionshypnose' },
     { name: 'Rückführungen', href: isHome ? '#rueckfuehrungen' : '/#rueckfuehrungen' },
@@ -18,11 +18,11 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#f4f1ea]/95 backdrop-blur-md border-b border-[#b89065]/20 shadow-[0_2px_15px_rgba(61,74,62,0.03)] transition-all">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 flex items-center justify-between gap-6">
         
-        {/* Logo and Brand */}
-        <Link to="/" className="flex items-center gap-3.5 sm:gap-4 group shrink-0">
-          <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full overflow-hidden shadow-[0_3px_10px_rgba(61,74,62,0.08)] border border-[#b89065]/30 group-hover:scale-105 transition-transform bg-[#f4f1ea] shrink-0 p-0.5">
+        {/* Brand Logo & Name */}
+        <Link to="/" className="flex items-center gap-3.5 sm:gap-4 group shrink-0 mr-4 lg:mr-8">
+          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden shadow-[0_3px_10px_rgba(61,74,62,0.08)] border border-[#b89065]/30 group-hover:scale-105 transition-transform bg-[#f4f1ea] shrink-0 p-0.5">
             <img
               src="/images/logo-zeitfuerseelen.png"
               alt="Zeit für Seelen Logo"
@@ -40,8 +40,8 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden xl:flex items-center gap-7 text-sm font-sans font-medium text-[#2b2d2f]">
+        {/* Desktop Navigation Links */}
+        <nav className="hidden lg:flex items-center justify-center gap-4 xl:gap-7 text-xs xl:text-sm font-sans font-medium text-[#2b2d2f] flex-1">
           {navLinks.map((link) => (
             link.isRoute ? (
               <Link
@@ -56,29 +56,6 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 className="hover:text-[#b89065] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#b89065] hover:after:w-full after:transition-all whitespace-nowrap"
-              >
-                {link.name}
-              </a>
-            )
-          ))}
-        </nav>
-
-        {/* Navigation for Medium/Large Screens (lg to xl) */}
-        <nav className="hidden lg:flex xl:hidden items-center gap-5 text-xs font-sans font-medium text-[#2b2d2f]">
-          {navLinks.map((link) => (
-            link.isRoute ? (
-              <Link
-                key={link.name}
-                to={link.to}
-                className="hover:text-[#b89065] transition-colors py-1 whitespace-nowrap"
-              >
-                {link.name}
-              </Link>
-            ) : (
-              <a
-                key={link.name}
-                href={link.href}
-                className="hover:text-[#b89065] transition-colors py-1 whitespace-nowrap"
               >
                 {link.name}
               </a>
@@ -87,7 +64,7 @@ export default function Navbar() {
         </nav>
 
         {/* Right CTA Button */}
-        <div className="hidden sm:flex items-center shrink-0">
+        <div className="hidden sm:flex items-center shrink-0 ml-2">
           <a
             href={isHome ? '#kontakt' : '/#kontakt'}
             className="btn-premium-dark !py-2.5 !px-5 sm:!px-6 !text-xs !tracking-widest whitespace-nowrap"
@@ -96,10 +73,10 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Hamburger */}
+        {/* Mobile Hamburger Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 text-[#3d4a3e] hover:bg-[#3d4a3e]/5 rounded-lg"
+          className="lg:hidden p-2 text-[#3d4a3e] hover:bg-[#3d4a3e]/5 rounded-lg shrink-0"
           aria-label="Menü öffnen"
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
