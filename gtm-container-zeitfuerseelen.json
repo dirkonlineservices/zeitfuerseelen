@@ -1,6 +1,6 @@
 {
   "exportFormatVersion": 2,
-  "exportTime": "2026-09-13 19:35:00",
+  "exportTime": "2026-09-13 19:40:00",
   "containerVersion": {
     "path": "accounts/1/containers/1/versions/0",
     "accountId": "1",
@@ -11,7 +11,7 @@
       "path": "accounts/1/containers/1",
       "accountId": "1",
       "containerId": "1",
-      "name": "Zeit für Seelen",
+      "name": "zeitfuerseelen.de",
       "publicId": "GTM-NVP6G6PN",
       "usageContext": [
         "WEB"
@@ -58,28 +58,6 @@
         "firingTriggerId": [
           "2"
         ]
-      },
-      {
-        "accountId": "1",
-        "containerId": "1",
-        "tagId": "3",
-        "name": "GA4 Event - Klick Flow der Stille",
-        "type": "gaawe",
-        "parameter": [
-          {
-            "type": "TEMPLATE",
-            "key": "measurementIdOverride",
-            "value": "G-B3Q41WWTQR"
-          },
-          {
-            "type": "TEMPLATE",
-            "key": "eventName",
-            "value": "click_partner_flow_der_stille"
-          }
-        ],
-        "firingTriggerId": [
-          "3"
-        ]
       }
     ],
     "trigger": [
@@ -109,30 +87,6 @@
                 "type": "TEMPLATE",
                 "key": "arg1",
                 "value": "lead_form_submitted"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "accountId": "1",
-        "containerId": "1",
-        "triggerId": "3",
-        "name": "Klick auf flow-der-stille.de",
-        "type": "LINK_CLICK",
-        "filter": [
-          {
-            "type": "CONTAINS",
-            "parameter": [
-              {
-                "type": "TEMPLATE",
-                "key": "arg0",
-                "value": "{{Click URL}}"
-              },
-              {
-                "type": "TEMPLATE",
-                "key": "arg1",
-                "value": "flow-der-stille.de"
               }
             ]
           }
