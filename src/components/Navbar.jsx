@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   const navLinks = [
-    { name: 'Startseite', href: '#hero' },
-    { name: 'Philosophie', href: '#philosophie' },
-    { name: 'Autorin & Werke', href: '#autorin' },
-    { name: 'Regressionshypnose', href: '#regressionshypnose' },
-    { name: 'Über mich', href: '#ueber-mich' },
-    { name: 'Angebote & Preise', href: '#angebote' },
+    { name: 'Startseite', to: '/', isRoute: true },
+    { name: 'Über mich & Autorin', to: '/ueber-mich', isRoute: true },
+    { name: 'Philosophie', href: isHome ? '#philosophie' : '/#philosophie' },
+    { name: 'Regressionshypnose', href: isHome ? '#regressionshypnose' : '/#regressionshypnose' },
+    { name: 'Rückführungen', href: isHome ? '#rueckfuehrungen' : '/#rueckfuehrungen' },
+    { name: 'Angebote & Preise', href: isHome ? '#angebote' : '/#angebote' },
   ];
 
   return (
@@ -18,7 +21,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 flex items-center justify-between">
         
         {/* Logo and Brand */}
-        <a href="#hero" className="flex items-center gap-3.5 sm:gap-4 group shrink-0">
+        <Link to="/" className="flex items-center gap-3.5 sm:gap-4 group shrink-0">
           <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full overflow-hidden shadow-[0_3px_10px_rgba(61,74,62,0.08)] border border-[#b89065]/30 group-hover:scale-105 transition-transform bg-[#f4f1ea] shrink-0 p-0.5">
             <img
               src="/images/logo-zeitfuerseelen.png"
@@ -35,38 +38,58 @@ export default function Navbar() {
               Jacqueline Schmetzer
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden xl:flex items-center gap-7 text-sm font-sans font-medium text-[#2b2d2f]">
           {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="hover:text-[#b89065] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#b89065] hover:after:w-full after:transition-all whitespace-nowrap"
-            >
-              {link.name}
-            </a>
+            link.isRoute ? (
+              <Link
+                key={link.name}
+                to={link.to}
+                className="hover:text-[#b89065] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#b89065] hover:after:w-full after:transition-all whitespace-nowrap"
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                className="hover:text-[#b89065] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#b89065] hover:after:w-full after:transition-all whitespace-nowrap"
+              >
+                {link.name}
+              </a>
+            )
           ))}
         </nav>
 
         {/* Navigation for Medium/Large Screens (lg to xl) */}
         <nav className="hidden lg:flex xl:hidden items-center gap-5 text-xs font-sans font-medium text-[#2b2d2f]">
           {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="hover:text-[#b89065] transition-colors py-1 whitespace-nowrap"
-            >
-              {link.name}
-            </a>
+            link.isRoute ? (
+              <Link
+                key={link.name}
+                to={link.to}
+                className="hover:text-[#b89065] transition-colors py-1 whitespace-nowrap"
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                className="hover:text-[#b89065] transition-colors py-1 whitespace-nowrap"
+              >
+                {link.name}
+              </a>
+            )
           ))}
         </nav>
 
         {/* Right CTA Button */}
         <div className="hidden sm:flex items-center shrink-0">
           <a
-            href="#kontakt"
+            href={isHome ? '#kontakt' : '/#kontakt'}
             className="btn-premium-dark !py-2.5 !px-5 sm:!px-6 !text-xs !tracking-widest whitespace-nowrap"
           >
             Kennenlernen
@@ -88,18 +111,29 @@ export default function Navbar() {
       {isOpen && (
         <div className="lg:hidden bg-[#f4f1ea] border-b border-[#b89065]/20 px-6 py-6 space-y-4 shadow-xl animate-in fade-in">
           {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="block text-base font-medium text-[#2b2d2f] hover:text-[#b89065] py-1.5"
-            >
-              {link.name}
-            </a>
+            link.isRoute ? (
+              <Link
+                key={link.name}
+                to={link.to}
+                onClick={() => setIsOpen(false)}
+                className="block text-base font-medium text-[#2b2d2f] hover:text-[#b89065] py-1.5"
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="block text-base font-medium text-[#2b2d2f] hover:text-[#b89065] py-1.5"
+              >
+                {link.name}
+              </a>
+            )
           ))}
           <div className="pt-2">
             <a
-              href="#kontakt"
+              href={isHome ? '#kontakt' : '/#kontakt'}
               onClick={() => setIsOpen(false)}
               className="w-full btn-premium-dark text-center !py-3"
             >
