@@ -1,76 +1,125 @@
 import React from 'react';
-import { Sparkles, HeartHandshake, ShieldCheck, Feather } from 'lucide-react';
 
 export default function About() {
+  const methods = [
+    {
+      title: 'Achtsamkeit & Entspannung',
+      desc: 'Wir beruhigen dein Nervensystem. Du lernst, im Hier und Jetzt anzukommen, den Atem als deinen Anker zu nutzen und Stress nicht nur zu bewältigen, sondern tiefgreifend zu lösen.',
+    },
+    {
+      title: 'Hypnose & Unterbewusstsein',
+      desc: 'Manchmal liegen die Blockaden tiefer, als unser Verstand reicht. In sicherer Trance reisen wir an die Wurzel deiner Themen, um alte Glaubenssätze sanft aufzulösen und neue, heilsame Impulse zu verankern.',
+    },
+    {
+      title: 'Seelenbegleitung',
+      desc: 'Wir blicken hinter die Fassade des Alltags. Gemeinsam finden wir heraus, was deine Seele gerade braucht, um wieder in ihre eigene Kraft, Klarheit und Lebensfreude zu kommen.',
+    },
+  ];
+
   return (
-    <section id="about" className="py-20 bg-white/70 border-y border-amber-100 relative">
+    <section id="ueber-mich" className="py-20 bg-[#f4f1ea] border-t border-[#3d4a3e]/10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        {/* Intro Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-20">
           
-          {/* Visual Column */}
-          <div className="lg:col-span-5 order-2 lg:order-1 flex justify-center">
-            <div className="relative max-w-sm w-full">
-              <div className="rounded-3xl overflow-hidden shadow-lg border-2 border-amber-100 aspect-square">
-                <img
-                  src="/images/jacky-ueber-mich.jpg"
-                  alt="Jacqueline Schmetzer"
-                  className="w-full h-full object-cover object-center"
-                  onError={(e) => {
-                    e.currentTarget.src = '/images/jacky-profil.jpeg';
-                  }}
-                />
-              </div>
-              <div className="absolute -bottom-5 -right-5 bg-amber-50 border border-amber-200 p-4 rounded-2xl shadow-md flex items-center gap-3">
-                <Feather className="w-6 h-6 text-amber-700 shrink-0" />
-                <span className="text-xs font-serif text-stone-800 italic leading-snug">
-                  „Höre auf deine Seele – <br />sie kennt deinen Weg.“
-                </span>
-              </div>
+          {/* Text Left */}
+          <div className="lg:col-span-7 space-y-5">
+            <h3 className="text-xs uppercase tracking-[2px] text-[#b89065] font-semibold font-sans">
+              Mein Weg ist es, dir den Raum zu halten
+            </h3>
+            
+            <h2 className="text-3xl sm:text-4xl font-display text-[#3d4a3e] font-normal leading-tight">
+              Willkommen in deinem sicheren Hafen
+            </h2>
+
+            <p className="font-serif italic text-lg text-[#3d4a3e] leading-relaxed">
+              Vielleicht bist du gerade hier, weil die Welt da draußen laut ist. Weil dein Kopf nicht zur Ruhe kommt, alte Muster dich festhalten oder du den tiefen Wunsch verspürst, dich selbst wieder spüren zu wollen.
+            </p>
+
+            <div className="space-y-4 text-[#2b2d2f] text-base font-light leading-relaxed">
+              <p>
+                Ich möchte dir eines vorab sagen: <strong className="font-semibold text-[#3d4a3e]">Du musst hier nichts leisten. Du darfst einfach sein.</strong>
+              </p>
+              <p>
+                Mein Name ist <strong className="font-semibold text-[#3d4a3e]">Jacqueline</strong>, und ich sehe mich nicht nur als Coach, sondern vor allem als Weg- und Seelenbegleiterin. Meine Berufung ist es, dir einen geschützten, urteilsfreien Raum zu kreieren, in dem alles sein darf, was ist: deine Sorgen, deine Tränen, aber auch deine verborgene Kraft und deine Visionen.
+              </p>
+              <p>
+                Ich halte diesen Raum für dich – mit absoluter Präsenz, Empathie und tiefer Ruhe.
+              </p>
             </div>
           </div>
 
-          {/* Text Column */}
-          <div className="lg:col-span-7 order-1 lg:order-2 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100/60 text-amber-900 text-xs font-medium">
-              <Sparkles className="w-3.5 h-3.5 text-amber-700" />
-              <span>Über mich & meine Haltung</span>
+          {/* Image Right */}
+          <div className="lg:col-span-5 flex justify-center">
+            <div className="relative max-w-xs sm:max-w-sm w-full">
+              <div className="absolute -bottom-4 -left-4 w-36 h-36 bg-[#b89065]/15 rounded-full -z-0" />
+              <img
+                src="/images/jacky-ueber-mich.webp"
+                alt="Portrait Jacqueline Schmetzer"
+                className="relative z-10 w-full h-auto rounded-[4px_60px_4px_60px] shadow-[0_15px_35px_rgba(61,74,62,0.1)] border-2 border-[#b89065]/20 object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = '/images/jacky-profil.jpeg';
+                }}
+              />
             </div>
-
-            <h2 className="text-3xl sm:text-4xl font-serif text-stone-900">
-              Hallo, ich bin <span className="text-amber-800">Jacqueline</span>
-            </h2>
-
-            <div className="space-y-4 text-stone-600 leading-relaxed text-base">
-              <p>
-                Das Leben stellt uns immer wieder vor Phasen, in denen alte Sicherheiten wegbrechen, Entscheidungen schwerfallen oder innere Unruhe unseren Alltag bestimmt. Genau in solchen Momenten ist es heilsam, einen geschützten Raum zu haben.
-              </p>
-              <p>
-                Als <strong>Seelenbegleiterin</strong> sehe ich meine Aufgabe darin, dir wertfrei und mit offenem Herzen zur Seite zu stehen. Ich unterstütze dich dabei, wieder in Kontakt mit deiner eigenen inneren Weisheit zu treten, blockierende Muster loszulassen und neuen Lebensmut zu schöpfen.
-              </p>
-            </div>
-
-            {/* Values Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-              <div className="flex gap-3.5 p-3.5 rounded-2xl bg-amber-50/60 border border-amber-100">
-                <HeartHandshake className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="font-semibold text-stone-800 text-sm">Präsent & Herzlich</h3>
-                  <p className="text-xs text-stone-600 mt-0.5">Echtes Zuhören und bedingungslose Akzeptanz deiner Gefühle.</p>
-                </div>
-              </div>
-
-              <div className="flex gap-3.5 p-3.5 rounded-2xl bg-amber-50/60 border border-amber-100">
-                <ShieldCheck className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="font-semibold text-stone-800 text-sm">Geschützter Raum</h3>
-                  <p className="text-xs text-stone-600 mt-0.5">Deine Themen und Empfindungen sind bei mir in sicheren Händen.</p>
-                </div>
-              </div>
-            </div>
-
           </div>
 
         </div>
+
+        {/* Methods Section */}
+        <div className="bg-white rounded-sm p-8 sm:p-12 shadow-[0_15px_35px_rgba(61,74,62,0.05)] border border-[#3d4a3e]/5 mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h3 className="text-xs uppercase tracking-[2px] text-[#b89065] font-semibold mb-2 font-sans">
+              Ganzheitlich, tief und nahbar
+            </h3>
+            <h2 className="text-3xl font-serif text-[#3d4a3e] font-normal">
+              Wie ich arbeite
+            </h2>
+            <p className="text-sm text-[#5c6064] mt-2 font-light">
+              Jeder Mensch bringt seine eigene, ganz persönliche Melodie mit. Deshalb kombiniere ich wissenschaftlich fundierte Methoden mit intuitiver, seelischer Arbeit.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {methods.map((method, idx) => (
+              <div
+                key={idx}
+                className="p-6 bg-[#f4f1ea] rounded-sm border-t-2 border-[#b89065] hover:-translate-y-1 transition-all"
+              >
+                <h4 className="font-serif text-lg text-[#3d4a3e] font-medium mb-3">
+                  {method.title}
+                </h4>
+                <p className="text-sm text-[#2b2d2f] font-light leading-relaxed">
+                  {method.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Philosophy Blockquote */}
+        <div className="max-w-3xl mx-auto text-center py-6">
+          <h3 className="text-xs uppercase tracking-[2px] text-[#b89065] font-semibold mb-6 font-sans">
+            Warum ich tue, was ich tue
+          </h3>
+          
+          <blockquote className="font-serif italic text-xl sm:text-2xl text-[#3d4a3e] leading-relaxed relative px-6 sm:px-12 mb-8">
+            „Erst wenn wir den Mut haben, die Augen zu schließen und nach innen zu blicken, finden wir die Antworten, die wir im Außen so verzweifelt gesucht haben.“
+          </blockquote>
+
+          <p className="text-sm text-[#5c6064] leading-relaxed font-light max-w-2xl mx-auto mb-8">
+            Mein eigener Weg hat mich gelehrt, wie essenziell es ist, in stürmischen Zeiten jemanden an der Seite zu haben, der die Taschenlampe hält, wenn es dunkel scheint. Ich bin hier, um dich daran zu erinnern, wer du in deiner reinsten Essenz bist: wertvoll, stark und heil.
+          </p>
+
+          <a
+            href="#kontakt"
+            className="btn-premium-dark"
+          >
+            Kennenlerngespräch vereinbaren
+          </a>
+        </div>
+
       </div>
     </section>
   );

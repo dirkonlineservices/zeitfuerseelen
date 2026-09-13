@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Philosophy from './components/Philosophy';
+import RegressionshypnoseSection from './components/RegressionshypnoseSection';
 import About from './components/About';
-import Services from './components/Services';
-import MeditationSection from './components/MeditationSection';
+import PricingOffers from './components/PricingOffers';
+import CTASection from './components/CTASection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LegalModal from './components/LegalModal';
@@ -20,14 +22,16 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-amber-50/30 text-stone-800">
+    <div className="min-h-screen flex flex-col bg-[#f4f1ea] text-[#2b2d2f]">
       <Navbar />
       
       <main className="flex-grow">
         <Hero />
+        <Philosophy />
+        <RegressionshypnoseSection />
         <About />
-        <Services />
-        <MeditationSection />
+        <PricingOffers />
+        <CTASection />
         <Contact />
       </main>
 
