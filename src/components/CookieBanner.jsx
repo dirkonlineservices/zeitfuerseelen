@@ -12,12 +12,33 @@ export default function CookieBanner({ onOpenLegal, forceOpen, onCloseForce }) {
     externalMedia: false,
   });
 
+  const updateConsentMode = (prefs) => {
+    if (typeof window !== 'undefined') {
+      window.dataLayer = window.dataLayer || [];
+      if (typeof window.gtag === 'function') {
+        window.gtag('consent', 'update', {
+          analytics_storage: prefs.analytics ? 'granted' : 'denied',
+          ad_storage: prefs.externalMedia ? 'granted' : 'denied',
+          ad_user_data: prefs.externalMedia ? 'granted' : 'denied',
+          ad_personalization: prefs.externalMedia ? 'granted' : 'denied',
+        });
+      }
+      window.dataLayer.push({
+        event: 'cookie_consent_update',
+        consent_analytics: Boolean(prefs.analytics),
+        consent_marketing: Boolean(prefs.externalMedia),
+        consent_essential: true,
+      });
+    }
+  };
+
   useEffect(() => {
     const savedConsent = localStorage.getItem(STORAGE_KEY);
     if (savedConsent) {
       try {
         const parsed = JSON.parse(savedConsent);
         setPreferences(parsed);
+        updateConsentMode(parsed);
         if (forceOpen) {
           setIsVisible(true);
           setShowDetails(true);
@@ -34,6 +55,7 @@ export default function CookieBanner({ onOpenLegal, forceOpen, onCloseForce }) {
   const saveConsent = (prefs) => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
     setPreferences(prefs);
+    updateConsentMode(prefs);
     setIsVisible(false);
     setShowDetails(false);
     if (onCloseForce) onCloseForce();
