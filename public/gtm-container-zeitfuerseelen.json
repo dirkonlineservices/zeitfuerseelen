@@ -1,217 +1,105 @@
 {
   "exportFormatVersion": 2,
-  "exportTime": "2026-09-13 19:25:00",
+  "exportTime": "2026-09-13 19:30:00",
   "containerVersion": {
-    "path": "accounts/100001/containers/200001/versions/0",
-    "accountId": "100001",
-    "containerId": "200001",
+    "path": "accounts/1/containers/1/versions/0",
+    "accountId": "1",
+    "containerId": "1",
     "containerVersionId": "0",
+    "fingerprint": "0",
     "container": {
-      "path": "accounts/100001/containers/200001",
-      "accountId": "100001",
-      "containerId": "200001",
-      "name": "Zeit für Seelen - Web Container",
-      "publicId": "GTM-ZEITFUERSEELEN",
+      "path": "accounts/1/containers/1",
+      "accountId": "1",
+      "containerId": "1",
+      "name": "Zeit für Seelen",
+      "publicId": "GTM-XXXXXX",
       "usageContext": [
         "WEB"
       ],
+      "fingerprint": "0",
       "tagManagerUrl": "https://tagmanager.google.com"
     },
     "tag": [
       {
-        "accountId": "100001",
-        "containerId": "200001",
+        "accountId": "1",
+        "containerId": "1",
         "tagId": "1",
-        "name": "Google Tag - GA4 Konfiguration (G-B3Q41WWTQR)",
-        "type": "googtag",
+        "name": "GA4 - Konfiguration (G-B3Q41WWTQR)",
+        "type": "gaaw_config",
         "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "measurementId",
+            "value": "G-B3Q41WWTQR"
+          },
           {
             "type": "BOOLEAN",
             "key": "sendPageView",
             "value": "true"
-          },
-          {
-            "type": "TEMPLATE",
-            "key": "tagId",
-            "value": "{{Const - GA4 Measurement ID}}"
           }
         ],
         "firingTriggerId": [
-          "2147479553"
-        ],
-        "consentSettings": {
-          "consentStatus": "NEEDED",
-          "consentType": {
-            "type": "LIST",
-            "list": [
-              {
-                "type": "TEMPLATE",
-                "value": "analytics_storage"
-              }
-            ]
-          }
-        }
+          "1"
+        ]
       },
       {
-        "accountId": "100001",
-        "containerId": "200001",
+        "accountId": "1",
+        "containerId": "1",
         "tagId": "2",
         "name": "GA4 Event - Kontaktanfrage (Generate Lead)",
         "type": "gaawe",
         "parameter": [
           {
             "type": "TEMPLATE",
-            "key": "eventName",
-            "value": "generate_lead"
+            "key": "measurementId",
+            "value": "G-B3Q41WWTQR"
           },
           {
             "type": "TEMPLATE",
-            "key": "measurementId",
-            "value": "{{Const - GA4 Measurement ID}}"
-          },
-          {
-            "type": "LIST",
-            "key": "eventParameters",
-            "list": [
-              {
-                "type": "MAP",
-                "map": [
-                  {
-                    "type": "TEMPLATE",
-                    "key": "name",
-                    "value": "lead_type"
-                  },
-                  {
-                    "type": "TEMPLATE",
-                    "key": "value",
-                    "value": "seelenbegleitung_anfrage"
-                  }
-                ]
-              }
-            ]
+            "key": "eventName",
+            "value": "generate_lead"
           }
         ],
         "firingTriggerId": [
-          "10"
-        ],
-        "consentSettings": {
-          "consentStatus": "NEEDED",
-          "consentType": {
-            "type": "LIST",
-            "list": [
-              {
-                "type": "TEMPLATE",
-                "value": "analytics_storage"
-              }
-            ]
-          }
-        }
+          "2"
+        ]
       },
       {
-        "accountId": "100001",
-        "containerId": "200001",
+        "accountId": "1",
+        "containerId": "1",
         "tagId": "3",
-        "name": "GA4 Event - Klick Flow der Stille (Outbound)",
+        "name": "GA4 Event - Klick Flow der Stille",
         "type": "gaawe",
         "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "measurementId",
+            "value": "G-B3Q41WWTQR"
+          },
           {
             "type": "TEMPLATE",
             "key": "eventName",
             "value": "click_partner_flow_der_stille"
-          },
-          {
-            "type": "TEMPLATE",
-            "key": "measurementId",
-            "value": "{{Const - GA4 Measurement ID}}"
-          },
-          {
-            "type": "LIST",
-            "key": "eventParameters",
-            "list": [
-              {
-                "type": "MAP",
-                "map": [
-                  {
-                    "type": "TEMPLATE",
-                    "key": "name",
-                    "value": "outbound_url"
-                  },
-                  {
-                    "type": "TEMPLATE",
-                    "key": "value",
-                    "value": "{{Click URL}}"
-                  }
-                ]
-              }
-            ]
           }
         ],
         "firingTriggerId": [
-          "11"
-        ],
-        "consentSettings": {
-          "consentStatus": "NEEDED",
-          "consentType": {
-            "type": "LIST",
-            "list": [
-              {
-                "type": "TEMPLATE",
-                "value": "analytics_storage"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "accountId": "100001",
-        "containerId": "200001",
-        "tagId": "4",
-        "name": "GA4 Event - Consent Aktualisierung",
-        "type": "gaawe",
-        "parameter": [
-          {
-            "type": "TEMPLATE",
-            "key": "eventName",
-            "value": "user_cookie_consent"
-          },
-          {
-            "type": "TEMPLATE",
-            "key": "measurementId",
-            "value": "{{Const - GA4 Measurement ID}}"
-          },
-          {
-            "type": "LIST",
-            "key": "eventParameters",
-            "list": [
-              {
-                "type": "MAP",
-                "map": [
-                  {
-                    "type": "TEMPLATE",
-                    "key": "name",
-                    "value": "consent_analytics"
-                  },
-                  {
-                    "type": "TEMPLATE",
-                    "key": "value",
-                    "value": "{{DLV - Consent Analytics}}"
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "firingTriggerId": [
-          "12"
+          "3"
         ]
       }
     ],
     "trigger": [
       {
-        "accountId": "100001",
-        "containerId": "200001",
-        "triggerId": "10",
-        "name": "Event - Kontaktformular abgesendet / Klick",
+        "accountId": "1",
+        "containerId": "1",
+        "triggerId": "1",
+        "name": "All Pages - Seitenaufrufe",
+        "type": "PAGEVIEW"
+      },
+      {
+        "accountId": "1",
+        "containerId": "1",
+        "triggerId": "2",
+        "name": "Kontaktanfrage gesendet",
         "type": "CUSTOM_EVENT",
         "customEventFilter": [
           {
@@ -232,10 +120,10 @@
         ]
       },
       {
-        "accountId": "100001",
-        "containerId": "200001",
-        "triggerId": "11",
-        "name": "Klick - Partnerlink Flow der Stille",
+        "accountId": "1",
+        "containerId": "1",
+        "triggerId": "3",
+        "name": "Klick auf flow-der-stille.de",
         "type": "LINK_CLICK",
         "filter": [
           {
@@ -254,51 +142,13 @@
             ]
           }
         ]
-      },
-      {
-        "accountId": "100001",
-        "containerId": "200001",
-        "triggerId": "12",
-        "name": "Event - Cookie Consent Update",
-        "type": "CUSTOM_EVENT",
-        "customEventFilter": [
-          {
-            "type": "EQUALS",
-            "parameter": [
-              {
-                "type": "TEMPLATE",
-                "key": "arg0",
-                "value": "{{_event}}"
-              },
-              {
-                "type": "TEMPLATE",
-                "key": "arg1",
-                "value": "cookie_consent_update"
-              }
-            ]
-          }
-        ]
       }
     ],
     "variable": [
       {
-        "accountId": "100001",
-        "containerId": "200001",
+        "accountId": "1",
+        "containerId": "1",
         "variableId": "1",
-        "name": "Const - GA4 Measurement ID",
-        "type": "c",
-        "parameter": [
-          {
-            "type": "TEMPLATE",
-            "key": "value",
-            "value": "G-B3Q41WWTQR"
-          }
-        ]
-      },
-      {
-        "accountId": "100001",
-        "containerId": "200001",
-        "variableId": "2",
         "name": "DLV - Consent Analytics",
         "type": "v",
         "parameter": [
@@ -313,57 +163,6 @@
             "value": "consent_analytics"
           }
         ]
-      },
-      {
-        "accountId": "100001",
-        "containerId": "200001",
-        "variableId": "3",
-        "name": "DLV - Consent Marketing",
-        "type": "v",
-        "parameter": [
-          {
-            "type": "INTEGER",
-            "key": "dataLayerVersion",
-            "value": "2"
-          },
-          {
-            "type": "TEMPLATE",
-            "key": "name",
-            "value": "consent_marketing"
-          }
-        ]
-      }
-    ],
-    "builtInVariable": [
-      {
-        "accountId": "100001",
-        "containerId": "200001",
-        "type": "PAGE_URL",
-        "name": "Page URL"
-      },
-      {
-        "accountId": "100001",
-        "containerId": "200001",
-        "type": "PAGE_PATH",
-        "name": "Page Path"
-      },
-      {
-        "accountId": "100001",
-        "containerId": "200001",
-        "type": "CLICK_URL",
-        "name": "Click URL"
-      },
-      {
-        "accountId": "100001",
-        "containerId": "200001",
-        "type": "CLICK_TEXT",
-        "name": "Click Text"
-      },
-      {
-        "accountId": "100001",
-        "containerId": "200001",
-        "type": "EVENT",
-        "name": "Event"
       }
     ]
   }
