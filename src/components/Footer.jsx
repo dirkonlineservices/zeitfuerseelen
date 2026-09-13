@@ -2,7 +2,7 @@ import React from 'react';
 import { Mail } from 'lucide-react';
 import InstagramIcon from './InstagramIcon';
 
-export default function Footer({ onOpenLegal }) {
+export default function Footer({ onOpenLegal, onOpenCookieSettings }) {
   return (
     <footer className="bg-[#212822] text-[#d8d2c4] py-16 border-t border-[#b89065]/30 text-xs">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
@@ -62,6 +62,12 @@ export default function Footer({ onOpenLegal }) {
                 className="hover:text-[#b89065] transition-colors"
               >
                 Widerrufsbelehrung
+              </button>
+              <button
+                onClick={onOpenCookieSettings}
+                className="hover:text-[#b89065] transition-colors text-[#b89065]/90 hover:underline"
+              >
+                Cookie-Einstellungen
               </button>
             </div>
           </div>

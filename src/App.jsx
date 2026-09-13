@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import LegalModal from './components/LegalModal';
+import CookieBanner from './components/CookieBanner';
 import HomePage from './pages/HomePage';
 import AboutAuthorPage from './pages/AboutAuthorPage';
 
@@ -27,6 +28,7 @@ function ScrollToAnchor() {
 
 export default function App() {
   const [legalModal, setLegalModal] = useState({ isOpen: false, type: 'impressum' });
+  const [cookieSettingsOpen, setCookieSettingsOpen] = useState(false);
 
   const handleOpenLegal = (type) => {
     setLegalModal({ isOpen: true, type });
@@ -50,12 +52,21 @@ export default function App() {
           </Routes>
         </main>
 
-        <Footer onOpenLegal={handleOpenLegal} />
+        <Footer
+          onOpenLegal={handleOpenLegal}
+          onOpenCookieSettings={() => setCookieSettingsOpen(true)}
+        />
 
         <LegalModal
           isOpen={legalModal.isOpen}
           onClose={handleCloseLegal}
           type={legalModal.type}
+        />
+
+        <CookieBanner
+          onOpenLegal={handleOpenLegal}
+          forceOpen={cookieSettingsOpen}
+          onCloseForce={() => setCookieSettingsOpen(false)}
         />
       </div>
     </BrowserRouter>
