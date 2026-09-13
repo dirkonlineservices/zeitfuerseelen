@@ -23,6 +23,7 @@ export default defineConfig({
       closeBundle() {
         if (fs.existsSync('dist/dev.html')) {
           fs.copyFileSync('dist/dev.html', 'index.html');
+          fs.copyFileSync('dist/dev.html', 'dist/index.html');
         }
         if (fs.existsSync('dist/assets')) {
           fs.cpSync('dist/assets', 'assets', { recursive: true });
