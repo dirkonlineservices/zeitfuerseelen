@@ -14,24 +14,23 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#f4f1ea]/90 backdrop-blur-md border-b border-[#3d4a3e]/10 transition-all">
+    <header className="sticky top-0 z-50 bg-[#f4f1ea]/95 backdrop-blur-md border-b border-[#b89065]/20 shadow-[0_2px_15px_rgba(61,74,62,0.03)] transition-all">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
         
-        {/* Logo */}
-        <a href="#hero" className="flex items-center gap-3">
-          <img
-            src="/images/logo-zeitfuerseelen.png"
-            alt="Zeit für Seelen Logo"
-            className="h-14 sm:h-16 w-auto object-contain"
-            onError={(e) => {
-              e.currentTarget.style.display = 'none';
-            }}
-          />
-          <div className="hidden sm:block">
-            <span className="font-display text-xl sm:text-2xl font-normal tracking-wide text-[#3d4a3e]">
+        {/* Logo and Brand */}
+        <a href="#hero" className="flex items-center gap-3.5 group">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden shadow-[0_4px_12px_rgba(61,74,62,0.08)] border border-[#b89065]/30 group-hover:scale-105 transition-transform bg-[#f4f1ea] shrink-0">
+            <img
+              src="/images/logo-zeitfuerseelen.png"
+              alt="Zeit für Seelen Logo"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <span className="font-display text-xl sm:text-2xl font-normal tracking-wide text-[#3d4a3e] block leading-tight">
               Zeit für Seelen
             </span>
-            <span className="block text-[11px] uppercase tracking-[0.2em] text-[#b89065] font-medium">
+            <span className="text-[11px] uppercase tracking-[0.2em] text-[#b89065] font-medium block mt-0.5">
               Jacqueline Schmetzer
             </span>
           </div>
@@ -73,7 +72,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="lg:hidden bg-[#f4f1ea] border-b border-[#3d4a3e]/15 px-6 py-6 space-y-4 shadow-xl">
+        <div className="lg:hidden bg-[#f4f1ea] border-b border-[#b89065]/20 px-6 py-6 space-y-4 shadow-xl animate-in fade-in">
           {navLinks.map((link) => (
             <a
               key={link.name}

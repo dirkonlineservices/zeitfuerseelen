@@ -3,7 +3,7 @@ import { Sparkles, Compass, Shield, Sun } from 'lucide-react';
 
 export default function RegressionshypnoseSection() {
   return (
-    <section id="regressionshypnose" className="py-20 bg-white">
+    <section id="regressionshypnose" className="py-20 bg-[#f4f1ea] border-t border-[#3d4a3e]/10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Intro */}
@@ -24,7 +24,7 @@ export default function RegressionshypnoseSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           
           {/* Card 1 */}
-          <div className="p-8 bg-[#f4f1ea] rounded-sm border-t-3 border-[#b89065] shadow-sm hover:shadow-md transition-all">
+          <div className="p-8 bg-white rounded-sm border-t-3 border-[#b89065] shadow-[0_15px_35px_rgba(61,74,62,0.04)] hover:shadow-md transition-all">
             <div className="flex items-center gap-3 text-xs uppercase tracking-wider text-[#b89065] font-semibold mb-2">
               <Compass className="w-4 h-4" />
               <span>Die Ausgangslage</span>
@@ -41,7 +41,7 @@ export default function RegressionshypnoseSection() {
           </div>
 
           {/* Card 2 */}
-          <div className="p-8 bg-[#f4f1ea] rounded-sm border-t-3 border-[#3d4a3e] shadow-sm hover:shadow-md transition-all">
+          <div className="p-8 bg-white rounded-sm border-t-3 border-[#3d4a3e] shadow-[0_15px_35px_rgba(61,74,62,0.04)] hover:shadow-md transition-all">
             <div className="flex items-center gap-3 text-xs uppercase tracking-wider text-[#b89065] font-semibold mb-2">
               <Sparkles className="w-4 h-4" />
               <span>Der Ansatz</span>
@@ -58,7 +58,7 @@ export default function RegressionshypnoseSection() {
           </div>
 
           {/* Card 3 */}
-          <div className="p-8 bg-[#f4f1ea] rounded-sm border-t-3 border-[#3d4a3e] shadow-sm hover:shadow-md transition-all">
+          <div className="p-8 bg-white rounded-sm border-t-3 border-[#3d4a3e] shadow-[0_15px_35px_rgba(61,74,62,0.04)] hover:shadow-md transition-all">
             <div className="flex items-center gap-3 text-xs uppercase tracking-wider text-[#b89065] font-semibold mb-2">
               <Sun className="w-4 h-4" />
               <span>Deine Entwicklung</span>
@@ -79,7 +79,7 @@ export default function RegressionshypnoseSection() {
           </div>
 
           {/* Card 4 */}
-          <div className="p-8 bg-[#f4f1ea] rounded-sm border-t-3 border-[#b89065] shadow-sm hover:shadow-md transition-all">
+          <div className="p-8 bg-white rounded-sm border-t-3 border-[#b89065] shadow-[0_15px_35px_rgba(61,74,62,0.04)] hover:shadow-md transition-all">
             <div className="flex items-center gap-3 text-xs uppercase tracking-wider text-[#b89065] font-semibold mb-2">
               <Shield className="w-4 h-4" />
               <span>Vertrauen</span>

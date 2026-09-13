@@ -25,7 +25,7 @@ export default function Philosophy() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Philosophy Card Box */}
-        <div className="bg-white rounded-sm p-8 sm:p-12 lg:p-16 shadow-[0_15px_35px_rgba(61,74,62,0.05)] border border-[#3d4a3e]/5 mb-24">
+        <div className="bg-white rounded-sm p-8 sm:p-12 lg:p-16 shadow-[0_15px_35px_rgba(61,74,62,0.05)] border border-[#b89065]/20 mb-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
             {/* Left Col */}
@@ -49,7 +49,7 @@ export default function Philosophy() {
             </div>
 
             {/* Right Col: Unser Versprechen */}
-            <div className="bg-[#3d4a3e]/[0.03] p-8 sm:p-10 rounded-sm border-l-2 border-[#b89065]">
+            <div className="bg-[#fbf9f4] p-8 sm:p-10 rounded-sm border-l-2 border-[#b89065] border border-[#b89065]/20 shadow-sm">
               <h3 className="text-base font-serif font-medium text-[#3d4a3e] mb-6">
                 Unser Versprechen an dich
               </h3>
@@ -102,7 +102,7 @@ export default function Philosophy() {
             {steps.map((step, idx) => (
               <div
                 key={idx}
-                className="bg-transparent border-l-2 border-[#b89065]/40 hover:border-[#3d4a3e] pl-6 pr-4 py-4 transition-all duration-300 hover:translate-x-1 hover:bg-white/40"
+                className="bg-white/60 border-l-2 border-[#b89065]/50 hover:border-[#3d4a3e] p-6 rounded-sm shadow-sm transition-all duration-300 hover:translate-x-1 hover:bg-white"
               >
                 <div className="text-xs uppercase tracking-[2px] text-[#b89065] font-semibold mb-1">
                   Schritt {idx + 1}
