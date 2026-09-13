@@ -7,8 +7,8 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Startseite', href: '#hero' },
     { name: 'Philosophie', href: '#philosophie' },
+    { name: 'Autorin & Werke', href: '#autorin' },
     { name: 'Regressionshypnose', href: '#regressionshypnose' },
-    { name: 'Rückführungen', href: '#rueckfuehrungen' },
     { name: 'Über mich', href: '#ueber-mich' },
     { name: 'Angebote & Preise', href: '#angebote' },
   ];

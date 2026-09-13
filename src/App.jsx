@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Philosophy from './components/Philosophy';
 import RegressionshypnoseSection from './components/RegressionshypnoseSection';
+import AuthorProfile from './components/AuthorProfile';
 import About from './components/About';
 import PricingOffers from './components/PricingOffers';
 import CTASection from './components/CTASection';
@@ -29,6 +30,7 @@ export default function App() {
         <Hero />
         <Philosophy />
         <RegressionshypnoseSection />
+        <AuthorProfile />
         <About />
         <PricingOffers />
         <CTASection />
