@@ -1,6 +1,6 @@
 {
   "exportFormatVersion": 2,
-  "exportTime": "2026-09-13 19:30:00",
+  "exportTime": "2026-09-13 19:35:00",
   "containerVersion": {
     "path": "accounts/1/containers/1/versions/0",
     "accountId": "1",
@@ -12,7 +12,7 @@
       "accountId": "1",
       "containerId": "1",
       "name": "Zeit für Seelen",
-      "publicId": "GTM-XXXXXX",
+      "publicId": "GTM-NVP6G6PN",
       "usageContext": [
         "WEB"
       ],
@@ -24,18 +24,13 @@
         "accountId": "1",
         "containerId": "1",
         "tagId": "1",
-        "name": "GA4 - Konfiguration (G-B3Q41WWTQR)",
-        "type": "gaaw_config",
+        "name": "Google-Tag (G-B3Q41WWTQR)",
+        "type": "googtag",
         "parameter": [
           {
             "type": "TEMPLATE",
-            "key": "measurementId",
+            "key": "tagId",
             "value": "G-B3Q41WWTQR"
-          },
-          {
-            "type": "BOOLEAN",
-            "key": "sendPageView",
-            "value": "true"
           }
         ],
         "firingTriggerId": [
