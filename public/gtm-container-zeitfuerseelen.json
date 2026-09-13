@@ -46,7 +46,7 @@
         "parameter": [
           {
             "type": "TEMPLATE",
-            "key": "measurementId",
+            "key": "measurementIdOverride",
             "value": "G-B3Q41WWTQR"
           },
           {
@@ -68,7 +68,7 @@
         "parameter": [
           {
             "type": "TEMPLATE",
-            "key": "measurementId",
+            "key": "measurementIdOverride",
             "value": "G-B3Q41WWTQR"
           },
           {
