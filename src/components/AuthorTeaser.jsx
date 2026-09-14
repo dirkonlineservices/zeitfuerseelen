@@ -24,7 +24,7 @@ export default function AuthorTeaser() {
                 />
                 <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md p-3.5 rounded-sm border-l-2 border-[#b89065] shadow-xs">
                   <span className="font-serif text-[#3d4a3e] font-semibold text-sm block">Jacqueline Schmetzer</span>
-                  <span className="text-xs uppercase tracking-wider text-[#b89065] font-sans font-medium block">Autorin & Seelenbegleiterin</span>
+                  <span className="text-xs uppercase tracking-wider text-[#b89065] font-sans font-medium block">Seelenbegleiterin & Coach</span>
                 </div>
               </div>
             </div>
@@ -38,7 +38,7 @@ export default function AuthorTeaser() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-display text-[#3d4a3e] font-normal leading-snug">
-              Meditationen, Hörbücher & transformative Selbsthypnosen
+              Meditationen, Selbsthypnosen & Hörbücher
             </h2>
 
             <p className="font-serif italic text-lg text-[#3d4a3e] leading-relaxed">
@@ -46,18 +46,22 @@ export default function AuthorTeaser() {
             </p>
 
             <p className="text-sm sm:text-base text-[#2b2d2f] font-light leading-relaxed">
-              Neben ihrer persönlichen 1:1 Seelenbegleitung verfasst Jacqueline Schmetzer wirkungsvolle <strong>geführte Meditationen</strong>, inspirierende <strong>Hörbücher</strong> und wissenschaftlich wie intuitiv fundierte <strong>Selbsthypnosen</strong>. 
+              Neben ihrer persönlichen 1:1 Seelenbegleitung verfasst Jacqueline Schmetzer wirkungsvolle <strong>geführte Meditationen</strong>, transformative <strong>Selbsthypnosen</strong> und berührende <strong>Hörbücher</strong>.
             </p>
 
             {/* Small Pill Highlights */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
-              <div className="p-3.5 bg-white rounded-sm border-l-2 border-[#b89065] shadow-xs flex items-center gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+              <div className="p-3 bg-white rounded-sm border-l-2 border-[#b89065] shadow-xs flex items-center gap-2.5">
                 <Headphones className="w-4 h-4 text-[#b89065] shrink-0" />
-                <span className="text-xs font-medium text-[#3d4a3e]">Geführte Klangreisen & Meditationen</span>
+                <span className="text-xs font-medium text-[#3d4a3e]">Meditationen</span>
               </div>
-              <div className="p-3.5 bg-white rounded-sm border-l-2 border-[#3d4a3e] shadow-xs flex items-center gap-3">
-                <BookOpen className="w-4 h-4 text-[#3d4a3e] shrink-0" />
-                <span className="text-xs font-medium text-[#3d4a3e]">Hörbücher & Seelentexte</span>
+              <div className="p-3 bg-white rounded-sm border-l-2 border-[#3d4a3e] shadow-xs flex items-center gap-2.5">
+                <Sparkles className="w-4 h-4 text-[#3d4a3e] shrink-0" />
+                <span className="text-xs font-medium text-[#3d4a3e]">Selbsthypnosen</span>
+              </div>
+              <div className="p-3 bg-white rounded-sm border-l-2 border-[#b89065] shadow-xs flex items-center gap-2.5">
+                <BookOpen className="w-4 h-4 text-[#b89065] shrink-0" />
+                <span className="text-xs font-medium text-[#3d4a3e]">Hörbücher</span>
               </div>
             </div>
 
@@ -74,7 +78,7 @@ export default function AuthorTeaser() {
                 />
                 <div>
                   <span className="font-semibold text-[#3d4a3e] block">Kooperation mit „Flow der Stille“</span>
-                  <span className="text-[11px] text-[#5c6064]">Offizielle Autorin der Meditationen & Hypnosen</span>
+                  <span className="text-[11px] text-[#5c6064]">Offizielle Autorin für Meditationen, Selbsthypnosen & Hörbücher</span>
                 </div>
               </div>
               <a

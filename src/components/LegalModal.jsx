@@ -57,7 +57,7 @@ export default function LegalModal({ isOpen, onClose, type }) {
                 70599 Stuttgart
               </p>
 
-              <h4 className="font-serif text-base text-[#3d4a3e] font-semibold mt-4">Rechtlicher Hinweis zur Seelenbegleitung & Hypnose</h4>
+              <h4 className="font-serif text-base text-[#3d4a3e] font-semibold mt-4">Rechtlicher Hinweis zur Seelenbegleitung & Regressionshypnose</h4>
               <p>
                 Die angebotene Seelenbegleitung, Regressionshypnose und Rückführungen dienen der Selbstreflexion, Aktivierung der Selbstheilungskräfte und geistig-seelischen Klärung. Sie ersetzen keine ärztliche, psychotherapeutische oder heilkundliche Diagnose oder Behandlung. Es werden keine Heilversprechen abgegeben.
               </p>

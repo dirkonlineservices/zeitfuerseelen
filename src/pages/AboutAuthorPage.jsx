@@ -45,7 +45,7 @@ export default function AboutAuthorPage() {
     {
       icon: Sparkles,
       title: 'Etablierte Urheberschaft',
-      desc: 'Verfasserin zahlreicher Audio-Werke und offizielle Schöpferin der Meditations- & Hypnoseinhalte für die Plattform Flow der Stille.',
+      desc: 'Verfasserin zahlreicher Audio-Werke und offizielle Schöpferin von Meditationen, Selbsthypnosen und Hörbüchern für die Plattform Flow der Stille.',
     },
     {
       icon: ShieldCheck,
@@ -81,7 +81,7 @@ export default function AboutAuthorPage() {
           </h1>
 
           <p className="font-serif italic text-xl sm:text-2xl text-[#3d4a3e] leading-relaxed">
-            Seelenbegleiterin & Autorin für geführte Meditationen, Hörbücher und Selbsthypnosen
+            Seelenbegleiterin & Coach | Autorin für Meditationen, Selbsthypnosen und Hörbücher
           </p>
         </div>
 

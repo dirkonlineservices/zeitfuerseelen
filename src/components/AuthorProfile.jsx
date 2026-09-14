@@ -40,7 +40,7 @@ export default function AuthorProfile() {
     {
       icon: Sparkles,
       title: 'Autorenschaft & Autorität (Authoritativeness)',
-      desc: 'Verfasserin zahlreicher Audio-Werke und offizielle Schöpferin der Meditations- & Hypnoseinhalte für Flow der Stille.',
+      desc: 'Verfasserin zahlreicher Audio-Werke und offizielle Schöpferin von Meditationen, Selbsthypnosen und Hörbüchern für Flow der Stille.',
     },
     {
       icon: ShieldCheck,
@@ -91,7 +91,7 @@ export default function AuthorProfile() {
                     Jacqueline Schmetzer
                   </span>
                   <span className="text-xs uppercase tracking-wider text-[#b89065] font-sans font-medium block mt-0.5">
-                    Autorin & Seelenbegleiterin
+                    Seelenbegleiterin & Coach
                   </span>
                 </div>
               </div>
@@ -106,7 +106,7 @@ export default function AuthorProfile() {
 
             <div className="space-y-4 text-[#2b2d2f] text-base font-light leading-relaxed">
               <p>
-                Hinter jeder Meditation und jedem Hypnosetext steht die Überzeugung, dass Sprache eine heilsame Schwingung besitzt. Als Autorin widmet sich <strong>Jacqueline Schmetzer</strong> der Kunst, durch präzise gewählte Worte, rhythmische Sprechpausen und bildhafte Metaphern einen direkten Zugang zum Unterbewusstsein zu schaffen.
+                Hinter jeder Meditation und jedem Text für Selbsthypnosen steht die Überzeugung, dass Sprache eine heilsame Schwingung besitzt. Als Autorin widmet sich <strong>Jacqueline Schmetzer</strong> der Kunst, durch präzise gewählte Worte, rhythmische Sprechpausen und bildhafte Metaphern einen direkten Zugang zum Unterbewusstsein zu schaffen.
               </p>
               <p>
                 Ihre Texte entstehen aus einer tiefen Verbindung zur menschlichen Psyche und praktischer Erfahrung in der Begleitungsarbeit. Sie schreibt keine abstrakten Ratgeber, sondern <strong>lebendige, fühlbare Seelenreisen</strong>, die den Hörer an die Hand nehmen – weg vom Leistungsdruck, hin zu innerer Sicherheit und Gelassenheit.

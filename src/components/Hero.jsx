@@ -61,7 +61,7 @@ export default function Hero() {
                 
                 <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm p-3.5 rounded-sm border-l-2 border-[#b89065] shadow-sm">
                   <p className="font-serif text-[#3d4a3e] font-semibold text-sm">Jacqueline Schmetzer</p>
-                  <p className="text-xs text-[#b89065] uppercase tracking-wider font-sans font-medium">Seelenbegleiterin & Hypnose</p>
+                  <p className="text-xs text-[#b89065] uppercase tracking-wider font-sans font-medium">Seelenbegleiterin & Coach</p>
                 </div>
               </div>
             </div>
